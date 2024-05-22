@@ -2,6 +2,28 @@
   text-align: center;
 }
 
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* to set root to 10px */
+  font-size: 62.5%;
+}
+
+:root {
+  --call-to-action: #06919d;
+  --reassign: #ff9900;
+  --highlight-orange: #ec9f05;
+  --feedback: #70a5d7;
+  --nav-bg: #222f3e;
+  --bg-grey-1: #f0f0f0;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +57,240 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.h-5rem {
+  height: 5rem;
+}
+
+.h-7rem {
+  height: 7rem;
+}
+
+.bg-color-green {
+  background-color: green;
+}
+
+.bg-color-nav {
+  background-color: var(--nav-bg);
+}
+
+.bg-color-grey-1 {
+  background-color: var(--bg-grey-1);
+}
+
+.bg-color-fff {
+  background-color: #fff;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-dir-column {
+  flex-direction: column;
+}
+
+.d-flex-space-between {
+  justify-content: space-between;
+}
+
+.d-flex-align-items-cent {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-0-5 {
+  gap: 0.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-0-5 {
+  padding: 0.5rem;
+}
+
+.f-20 {
+  font-size: 20px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.overflow-x {
+  overflow-x: auto;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+.flex-basis-20 {
+  flex-basis: 20px;
+}
+
+.flex-basis-100 {
+  flex-basis: 100px;
+}
+
+.flex-basis-150 {
+  flex-basis: 150px;
+}
+
+.flex-basis-200 {
+  flex-basis: 200px;
+}
+
+.flex-basis-300 {
+  flex-basis: 300px;
+}
+
+.flex-basis-400 {
+  flex-basis: 400px;
+}
+
+.flex-basis-1200 {
+  flex-basis: 1200px;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.shadow-2-5 {
+  box-shadow: 0 0 2.5px grey;
+}
+.rad-3-all {
+  border-radius: 3px;
+}
+
+.rad-8-all {
+  border-radius: 8px;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.t-right {
+  text-align: right;
+}
+.t-left {
+  text-align: left;
+}
+
+.border-pri {
+  border: 1px solid rgb(190, 190, 190);
+}
+
+/* ///// */
+
+.dndflow {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dndflow aside {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #fcfcfc;
+}
+
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+.dndflow .dndnode {
+  height: 20px;
+  padding: 4px;
+  border: 1px solid #1a192b;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+.dndflow .dndnode.input {
+  border-color: #0041d0;
+}
+
+.dndflow .dndnode.output {
+  border-color: #ff0072;
+}
+
+.dndflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dndflow .selectall {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .dndflow {
+    flex-direction: row;
+  }
+
+  .dndflow aside {
+    width: 20%;
+    max-width: 250px;
+  }
+}
+
+.text-updater-node {
+  height: 50px;
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  background: white;
+}
+
+.text-updater-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
 }
