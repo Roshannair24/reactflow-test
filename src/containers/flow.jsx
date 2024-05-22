@@ -14,10 +14,6 @@ import CustomNode from "../components/CustomNode";
 import MsgSidebar from "../components/msgSidebar";
 import Nav from "../components/navBar";
 
-const rfStyle = {
-  // backgroundColor: "#B8CEFF",
-};
-
 const initialNodes = [
   // {
   //   id: "node-1",
@@ -93,12 +89,6 @@ const DnDFlow = () => {
           x: event.clientX,
           y: event.clientY,
         });
-        // const newNode = {
-        //   id: getId(),
-        //   type,
-        //   position,
-        //   data: { label: `${type} node` },
-        // };
 
         const newNode = {
           id: getId(),
@@ -113,12 +103,6 @@ const DnDFlow = () => {
           x: event.clientX,
           y: event.clientY,
         });
-        // const newNode = {
-        //   id: getId(),
-        //   type,
-        //   position,
-        //   data: { label: `${type} node` },
-        // };
 
         const newNode = {
           id: getId(),
@@ -142,15 +126,16 @@ const DnDFlow = () => {
 
         setNodes((nds) => nds.concat(newNode));
       }
-
-      // setNodes((nds) => nds.concat(newNode));
     },
     [reactFlowInstance]
   );
 
   return (
-    <div className="d-flex d-flex-dir-column" style={{ width: "100vw", height: "100vh" }}>
-      <Nav nodes={nodes} edges={edges}/>
+    <div
+      className="d-flex d-flex-dir-column"
+      style={{ width: "100vw", height: "100vh" }}
+    >
+      <Nav nodes={nodes} edges={edges} />
 
       <div className="dndflow">
         <ReactFlowProvider>
@@ -167,7 +152,6 @@ const DnDFlow = () => {
               onSelectionChange={memoizedCallback}
               fitView
               nodeTypes={nodeTypes}
-              // style={rfStyle}
             >
               <Controls />
             </ReactFlow>

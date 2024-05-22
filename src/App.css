@@ -16,12 +16,10 @@ html {
 }
 
 :root {
-  --call-to-action: #06919d;
-  --reassign: #ff9900;
-  --highlight-orange: #ec9f05;
-  --feedback: #70a5d7;
-  --nav-bg: #222f3e;
+  --v1: rgb(64, 112, 253);
   --bg-grey-1: #f0f0f0;
+  --warning:#e34009;
+  --wsGreen:#b2f0e5;
 }
 
 .App-logo {
@@ -92,11 +90,7 @@ html {
 }
 
 .bg-color-green {
-  background-color: green;
-}
-
-.bg-color-nav {
-  background-color: var(--nav-bg);
+  background-color: var(--wsGreen);
 }
 
 .bg-color-grey-1 {
@@ -123,6 +117,10 @@ html {
   align-items: center;
 }
 
+.d-flex-just-cont-cent {
+  justify-content: center;
+}
+
 .gap-1 {
   gap: 1rem;
 }
@@ -145,6 +143,10 @@ html {
 
 .f-14 {
   font-size: 14px;
+}
+
+.f-12 {
+  font-size: 12px;
 }
 
 .overflow-x {
@@ -198,6 +200,10 @@ html {
   border-radius: 3px;
 }
 
+.rad-3-up {
+  border-radius: 3px 3px 0 0;
+}
+
 .rad-8-all {
   border-radius: 8px;
 }
@@ -219,6 +225,26 @@ html {
 
 .border-pri {
   border: 1px solid rgb(190, 190, 190);
+}
+
+
+
+.border-v1 {
+  border: 1px solid var(--v1);
+}
+
+
+.border-v2 {
+  border: 1px solid rgb(226, 226, 226);
+}
+
+.color-v1 {
+  color: var(--v1);
+}
+
+
+.min-width-150{
+  min-width: 150px;
 }
 
 /* ///// */
@@ -284,10 +310,13 @@ html {
 .text-updater-node {
   height: 50px;
   border: 1px solid #eee;
-  padding: 5px;
+  /* padding: 5px; */
   border-radius: 5px;
   background: white;
 }
+
+
+
 
 .text-updater-node label {
   display: block;
