@@ -9,7 +9,6 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 
 import Sidebar from "../components/sidebar";
-import TextUpdaterNode from "../components/TextUpdaterNode";
 import CustomNode from "../components/CustomNode";
 import MsgSidebar from "../components/msgSidebar";
 import Nav from "../components/navBar";
@@ -30,7 +29,7 @@ const initialNodes = [
 ];
 
 // defining the nodeTypes outside of the component to prevent re-renderings
-const nodeTypes = { textUpdater: TextUpdaterNode, customNode: CustomNode };
+const nodeTypes = { customNode: CustomNode };
 
 let id = 0;
 const getId = () => `dndnode_${id++}`;
@@ -47,8 +46,6 @@ const DnDFlow = () => {
   }, []);
 
   const setTextFunc = (text, local_id) => {
-    console.log("out text", text, "-", local_id);
-
     setNodes((nds) =>
       nds.map((node) => {
         if (node.id === local_id) {
